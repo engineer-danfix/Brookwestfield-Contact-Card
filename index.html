@@ -73,13 +73,13 @@
     </header>
     <!-- Main Content Area -->
     <main
-        class="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-slate-50/50 dark:bg-background-dark">
+        class="flex-grow flex items-center justify-center py-4 md:py-12 px-4 sm:px-6 lg:px-8 bg-slate-50/50 dark:bg-background-dark">
         <div
             class="w-full max-w-5xl bg-white dark:bg-slate-900 rounded-2xl shadow-xl shadow-slate-200/50 dark:shadow-none overflow-hidden border border-slate-100 dark:border-slate-800">
             <div class="flex flex-col md:flex-row">
                 <!-- Left Column: Portrait Image -->
                 <div
-                    class="w-full md:w-5/12 lg:w-4/12 relative h-96 md:h-auto min-h-[400px] transition-all duration-[800ms] ease-in-out">
+                    class="w-full md:w-5/12 lg:w-4/12 relative h-72 md:h-auto min-h-[280px] md:min-h-0 transition-all duration-[800ms] ease-in-out">
                     <img alt="Profile Picture Placeholder"
                         class="absolute inset-0 w-full h-full object-cover object-top"
                         src="https://res.cloudinary.com/dauvkasja/image/upload/v1771856236/casual-young-african-man-smiling-isolated-white_stanpb.jpg" />
@@ -88,9 +88,9 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-metcore-navy/40 to-transparent md:hidden"></div>
                 </div>
                 <!-- Right Column: Details -->
-                <div class="w-full md:w-7/12 lg:w-8/12 p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+                <div class="w-full md:w-7/12 lg:w-8/12 p-6 md:p-12 lg:p-16 flex flex-col justify-center">
                     <!-- Header Info -->
-                    <div class="mb-8">
+                    <div class="mb-4 md:mb-8">
                         <h1
                             class="text-4xl md:text-5xl font-extrabold text-metcore-navy dark:text-white tracking-tight mb-2">
                             Tobi Olumuyiwa
@@ -107,82 +107,30 @@
                         </p>
                     </div>
                     <!-- Action Buttons -->
-                    <div class="flex flex-col gap-4 mb-10">
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col gap-4 mb-6 md:mb-10">
                         <div class="flex flex-col sm:flex-row gap-4 w-full" id="action-buttons-group">
                             <!-- Email Button Container -->
-                            <div class="flex-1 relative group/email-container">
-                                <button id="email-toggle-btn"
-                                    class="w-full inline-flex items-center justify-center gap-2 bg-metcore-orange hover:bg-orange-600 text-white font-bold py-3.5 px-8 rounded-lg transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg shadow-orange-500/20 border-2 border-transparent">
-                                    <span class="material-symbols-outlined">mail</span>
-                                    Email Me
-                                    <span class="material-symbols-outlined transition-transform duration-200"
-                                        id="dropdown-arrow-email">expand_more</span>
-                                </button>
+                            <div class="flex-1">
+                                <a href="mailto:tobi@metcoredigitech.com"
+                                    class="w-full h-14 inline-flex items-center justify-center gap-3 bg-metcore-orange hover:bg-orange-600 text-white font-bold px-6 rounded-lg transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg shadow-orange-500/20 border-2 border-transparent text-sm md:text-base">
+                                    <span class="material-symbols-outlined text-xl">mail</span>
+                                    <span class="truncate">tobi@metcoredigitech.com</span>
+                                </a>
                             </div>
 
                             <!-- Call Me Button Container -->
-                            <div class="flex-1 relative group/phone-container">
-                                <button id="phone-toggle-btn"
-                                    class="w-full inline-flex items-center justify-center gap-2 bg-metcore-orange hover:bg-orange-600 text-white font-bold py-3.5 px-8 rounded-lg transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg shadow-orange-500/20 border-2 border-transparent">
-                                    <span class="material-symbols-outlined">call</span>
-                                    Call Me
-                                    <span class="material-symbols-outlined transition-transform duration-200"
-                                        id="dropdown-arrow-phone">expand_more</span>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Dropdown Menus Area -->
-                        <div class="relative">
-                            <!-- Email Dropdown -->
-                            <div id="email-dropdown"
-                                class="w-full bg-slate-50/50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 rounded-xl overflow-hidden transition-all duration-[800ms] opacity-0 max-h-0 invisible pointer-events-none mb-2">
-                                <div class="p-2 space-y-1">
-                                    <button
-                                        class="w-full flex items-center justify-between p-3 rounded-lg hover:bg-white dark:hover:bg-slate-700 transition-colors group text-left"
-                                        onclick="copyEmail('tobi@metcoredigitech.com', this)">
-                                        <span class="text-sm font-semibold truncate">tobi@metcoredigitech.com</span>
-                                        <span
-                                            class="text-[10px] font-bold text-primary opacity-0 group-hover:opacity-40 transition-opacity uppercase">Click
-                                            to copy & open</span>
-                                    </button>
-                                    <button
-                                        class="w-full flex items-center justify-between p-3 rounded-lg hover:bg-white dark:hover:bg-slate-700 transition-colors group text-left"
-                                        onclick="copyEmail('tobi@brookfieldwest.com', this)">
-                                        <span class="text-sm font-semibold truncate">tobi@brookfieldwest.com</span>
-                                        <span
-                                            class="text-[10px] font-bold text-primary opacity-0 group-hover:opacity-40 transition-opacity uppercase">Click
-                                            to copy & open</span>
-                                    </button>
-                                    <button
-                                        class="w-full flex items-center justify-between p-3 rounded-lg hover:bg-white dark:hover:bg-slate-700 transition-colors group text-left"
-                                        onclick="copyEmail('tobi@thereneo.com', this)">
-                                        <span class="text-sm font-semibold truncate">tobi@thereneo.com</span>
-                                        <span
-                                            class="text-[10px] font-bold text-primary opacity-0 group-hover:opacity-40 transition-opacity uppercase">Click
-                                            to copy & open</span>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Phone Dropdown -->
-                            <div id="phone-dropdown"
-                                class="w-full bg-slate-50/50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 rounded-xl overflow-hidden transition-all duration-[800ms] opacity-0 max-h-0 invisible pointer-events-none">
-                                <div class="p-2 space-y-1">
-                                    <button
-                                        class="w-full flex items-center justify-between p-3 rounded-lg hover:bg-white dark:hover:bg-slate-700 transition-colors group text-left"
-                                        onclick="copyPhone('+234 81 xxxx xxxx dyg', this)">
-                                        <span class="text-sm font-semibold truncate">+234 81 xxxx xxxx dyg</span>
-                                        <span
-                                            class="text-[10px] font-bold text-primary opacity-0 group-hover:opacity-40 transition-opacity uppercase">Click
-                                            to copy & call</span>
-                                    </button>
-                                </div>
+                            <div class="flex-1">
+                                <a href="tel:+2348100000000"
+                                    class="w-full h-14 inline-flex items-center justify-center gap-3 bg-metcore-orange hover:bg-orange-600 text-white font-bold px-6 rounded-lg transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg shadow-orange-500/20 border-2 border-transparent text-sm md:text-base">
+                                    <span class="material-symbols-outlined text-xl">call</span>
+                                    <span class="truncate">+234 81 000 00000</span>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <!-- Social Connections -->
-                    <div class="border-t border-slate-100 dark:border-slate-800 pt-8">
+                    <div class="border-t border-slate-100 dark:border-slate-800 pt-6">
                         <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Connect on Social</p>
                         <div class="flex gap-4">
                             <!-- LinkedIn -->
@@ -218,165 +166,8 @@
         </div>
     </footer>
     <script>
-        const emailToggleBtn = document.getElementById('email-toggle-btn');
-        const emailDropdown = document.getElementById('email-dropdown');
-        const emailArrow = document.getElementById('dropdown-arrow-email');
-
-        const phoneToggleBtn = document.getElementById('phone-toggle-btn');
-        const phoneDropdown = document.getElementById('phone-dropdown');
-        const phoneArrow = document.getElementById('dropdown-arrow-phone');
-
-        let isEmailOpen = false;
-        let isPhoneOpen = false;
-        let hoverTimeoutEmail;
-        let hoverTimeoutPhone;
-
-        // --- EMAIL LOGIC ---
-        function openEmailDropdown() {
-            if (isEmailOpen) return;
-            if (isPhoneOpen) closePhoneDropdown();
-
-            isEmailOpen = true;
-            emailDropdown.classList.remove('invisible', 'pointer-events-none');
-            requestAnimationFrame(() => {
-                emailDropdown.classList.remove('opacity-0', 'max-h-0');
-                emailDropdown.classList.add('opacity-100', 'max-h-96');
-                emailArrow.style.transform = 'rotate(180deg)';
-            });
-        }
-
-        function closeEmailDropdown() {
-            if (!isEmailOpen) return;
-            isEmailOpen = false;
-            emailDropdown.classList.remove('opacity-100', 'max-h-96');
-            emailDropdown.classList.add('opacity-0', 'max-h-0');
-            emailArrow.style.transform = 'rotate(0deg)';
-            setTimeout(() => {
-                if (!isEmailOpen) emailDropdown.classList.add('invisible', 'pointer-events-none');
-            }, 800);
-        }
-
-        // --- PHONE LOGIC ---
-        function openPhoneDropdown() {
-            if (isPhoneOpen) return;
-            if (isEmailOpen) closeEmailDropdown();
-
-            isPhoneOpen = true;
-            phoneDropdown.classList.remove('invisible', 'pointer-events-none');
-            requestAnimationFrame(() => {
-                phoneDropdown.classList.remove('opacity-0', 'max-h-0');
-                phoneDropdown.classList.add('opacity-100', 'max-h-96');
-                phoneArrow.style.transform = 'rotate(180deg)';
-            });
-        }
-
-        function closePhoneDropdown() {
-            if (!isPhoneOpen) return;
-            isPhoneOpen = false;
-            phoneDropdown.classList.remove('opacity-100', 'max-h-96');
-            phoneDropdown.classList.add('opacity-0', 'max-h-0');
-            phoneArrow.style.transform = 'rotate(0deg)';
-            setTimeout(() => {
-                if (!isPhoneOpen) phoneDropdown.classList.add('invisible', 'pointer-events-none');
-            }, 800);
-        }
-
-        // --- EVENT LISTENERS ---
-        // Email Hover
-        emailToggleBtn.parentElement.addEventListener('mouseenter', () => {
-            clearTimeout(hoverTimeoutEmail);
-            openEmailDropdown();
-        });
-        emailDropdown.addEventListener('mouseenter', () => {
-            clearTimeout(hoverTimeoutEmail);
-        });
-        emailToggleBtn.parentElement.addEventListener('mouseleave', () => {
-            hoverTimeoutEmail = setTimeout(closeEmailDropdown, 300);
-        });
-        emailDropdown.addEventListener('mouseleave', () => {
-            hoverTimeoutEmail = setTimeout(closeEmailDropdown, 300);
-        });
-
-        // Phone Hover
-        phoneToggleBtn.parentElement.addEventListener('mouseenter', () => {
-            clearTimeout(hoverTimeoutPhone);
-            openPhoneDropdown();
-        });
-        phoneDropdown.addEventListener('mouseenter', () => {
-            clearTimeout(hoverTimeoutPhone);
-        });
-        phoneToggleBtn.parentElement.addEventListener('mouseleave', () => {
-            hoverTimeoutPhone = setTimeout(closePhoneDropdown, 300);
-        });
-        phoneDropdown.addEventListener('mouseleave', () => {
-            hoverTimeoutPhone = setTimeout(closePhoneDropdown, 300);
-        });
-
-        // Clicks
-        emailToggleBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            isEmailOpen ? closeEmailDropdown() : openEmailDropdown();
-        });
-        phoneToggleBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            isPhoneOpen ? closePhoneDropdown() : openPhoneDropdown();
-        });
-
-        document.addEventListener('click', () => {
-            closeEmailDropdown();
-            closePhoneDropdown();
-        });
-
-        // Close on window resize
-        window.addEventListener('resize', () => {
-            if (isEmailOpen) closeEmailDropdown();
-            if (isPhoneOpen) closePhoneDropdown();
-        });
-
-        async function copyEmail(email, element) {
-            try {
-                await navigator.clipboard.writeText(email);
-                const feedbackSpan = element.querySelector('span:last-child');
-                const originalText = feedbackSpan.innerText;
-
-                feedbackSpan.innerText = 'COPIED & OPENING...';
-                feedbackSpan.classList.remove('opacity-0');
-                feedbackSpan.classList.add('opacity-100', 'text-green-500');
-
-                setTimeout(() => { window.location.href = `mailto:${email}`; }, 1200);
-                setTimeout(() => {
-                    closeEmailDropdown();
-                    setTimeout(() => {
-                        feedbackSpan.innerText = originalText;
-                        feedbackSpan.classList.remove('opacity-100', 'text-green-500');
-                        feedbackSpan.classList.add('opacity-0');
-                    }, 300);
-                }, 2500);
-            } catch (err) { console.error('Failed to copy: ', err); }
-        }
-
-        async function copyPhone(phone, element) {
-            try {
-                const cleanPhone = phone.replace(/[^\d+]/g, '');
-                await navigator.clipboard.writeText(phone);
-                const feedbackSpan = element.querySelector('span:last-child');
-                const originalText = feedbackSpan.innerText;
-
-                feedbackSpan.innerText = 'COPIED & CALLING...';
-                feedbackSpan.classList.remove('opacity-0');
-                feedbackSpan.classList.add('opacity-100', 'text-green-500');
-
-                setTimeout(() => { window.location.href = `tel:${cleanPhone}`; }, 1200);
-                setTimeout(() => {
-                    closePhoneDropdown();
-                    setTimeout(() => {
-                        feedbackSpan.innerText = originalText;
-                        feedbackSpan.classList.remove('opacity-100', 'text-green-500');
-                        feedbackSpan.classList.add('opacity-0');
-                    }, 300);
-                }, 2500);
-            } catch (err) { console.error('Failed to copy: ', err); }
-        }
+        // No additional JavaScript needed for primary contact buttons 
+        // as they now use direct mailto: and tel: links.
     </script>
 </body>
 
